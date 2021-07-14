@@ -25,7 +25,6 @@ export type LogEvent =
 	| LogEventBase;
 
 const is_node = typeof process < 'u' && typeof process.stdout < 'u';
-
 const to_reg_exp = (x: string) => new RegExp(x.replace(/\*/g, '.*') + '$');
 let allows: RegExp[];
 
