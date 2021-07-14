@@ -11,6 +11,7 @@ specifiers:
   tslib: 2.3.0
   typescript: 4.3.4
   uvu: 0.5.1
+  yarpm: ^1.1.1
 
 devDependencies:
   '@marais/tsconfig': 0.0.1
@@ -23,6 +24,7 @@ devDependencies:
   tslib: 2.3.0
   typescript: 4.3.4
   uvu: 0.5.1
+  yarpm: 1.1.1
 
 packages:
 
@@ -40,6 +42,10 @@ packages:
 
   /buffer-from/1.1.1:
     resolution: {integrity: sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==}
+    dev: true
+
+  /command-exists/1.2.9:
+    resolution: {integrity: sha512-LTQ/SGc+s0Xc0Fu5WaKnR0YiygZkm9eKFvyS+fRsU7/ZWFF8ykFM6Pc9aCVf1+xasOOZpO3BAVgVrKvsqKHV7w==}
     dev: true
 
   /cross-env/7.0.3:
@@ -204,4 +210,12 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
+    dev: true
+
+  /yarpm/1.1.1:
+    resolution: {integrity: sha512-A3gVdtyld+gYcVmKScvJqS2oT/i9xdsb/SqDsY9c0+BeYdYBUJrRfr4pD7UP+5uXEneJ0BL0rC/6rd1fnlYEcg==}
+    hasBin: true
+    dependencies:
+      command-exists: 1.2.9
+      cross-spawn: 7.0.3
     dev: true
