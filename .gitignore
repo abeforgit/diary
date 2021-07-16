@@ -17,3 +17,6 @@ node_modules
 /diary
 /json
 /utils
+
+# Tooling
+.tool-versions

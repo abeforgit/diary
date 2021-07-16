@@ -25,7 +25,6 @@ export type LogEvent =
 	| LogEventBase;
 
 const is_node = typeof process < 'u' && typeof process.stdout < 'u';
-
 const to_reg_exp = (x: string) => new RegExp(x.replace(/\*/g, '.*') + '$');
 let allows: RegExp[];
 
@@ -53,9 +52,6 @@ let allows: RegExp[];
 export const enable = (allows_query: string) => {
 	allows = allows_query.split(/[\s,]+/).map(to_reg_exp);
 };
-
-// read `localstorage`/`env` for scope "name"s allowed to log
-enable((is_node ? process.env.DEBUG : localStorage.getItem('DEBUG')) || 'a^');
 
 // ~ Logger
 
